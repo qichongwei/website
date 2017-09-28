@@ -143,12 +143,15 @@ div {
 /*新闻列表*/
 .newsbox{
     margin-top: 80px;
+<<<<<<< HEAD
     overflow-y: scroll;
 
 }
 .newsbox::-webkit-scrollbar{
     width:0;
     height:0;
+=======
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
 }
 .box{
     width: 90%;

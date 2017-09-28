@@ -9,6 +9,7 @@ import axios from 'axios';
 
 export  default  class App extends React.Component {
     // es6默认state写法
+<<<<<<< HEAD
     constructor() {
         super();
         this.last=undefined;
@@ -39,11 +40,36 @@ export  default  class App extends React.Component {
                     load: false,
                     arr: arr1,
                     num: number + 10
+=======
+    state = {
+        load: true,
+        arr: [{
+            category: "news",
+            pic: "http://api.jisuapi.com/news/upload/201709/20230002_82040.png",
+            src: "人民日报中央厨房",
+            time: "2017-09-20 21:39",
+            title: "媒体：校园“港独”愈演愈烈？ 兔子尾巴而已",
+            url: "http://news.sina.cn/gn/2017-09-20/detail-ifykywuc8510962.d.html?vt=4&pos=108",
+            weburl: "http://news.sina.com.cn/c/zs/2017-09-20/doc-ifykywuc8510962.shtml"
+        }]
+    };
+
+    componentDidMount() {
+        console.log(this.props.location.pathname);
+        let query=this.props.location.pathname.slice(-2);
+        axios.get(`http://localhost:4005/?channel=${query}&start=0`)
+            .then((response) => {
+                console.log(response);
+                this.setState({
+                    load: false,
+                    arr: response.data
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
                 });
             })
             .catch(function (error) {
                 console.log(error);
             });
+<<<<<<< HEAD
         function getViewportSize() {
             return {
                 width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
@@ -127,6 +153,8 @@ export  default  class App extends React.Component {
         }
         console.log(this.lastIndex);
         console.log(this.scrollTop);
+=======
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
 
     }
 
@@ -135,6 +163,7 @@ export  default  class App extends React.Component {
             <div className="newsbox">
                 <Load load={this.state.load}/>
                 {this.state.arr.map(function (elem, index, arr) {
+<<<<<<< HEAD
                     if (index == arr.length - 1) {
                         console.log('证明我执行了last');
                         return (
@@ -145,6 +174,10 @@ export  default  class App extends React.Component {
                     console.log('证明我执行');
                     return (
                         <News img={elem.pic} time={elem.time} title={elem.title} name={elem.src} key={'item' + index}/>
+=======
+                    return (
+                        <News img={elem.pic} time={elem.time} title={elem.title} name={elem.src} href={elem.url}/>
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
                     )
                 })}
             </div>

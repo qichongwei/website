@@ -22,7 +22,11 @@ import React from 'react'
     //     qijiayin: false
     // };
     render(){
+<<<<<<< HEAD
         return(<a className="box clear" href={this.props.href} id={this.props.id}>
+=======
+        return(<a className="box clear" href={this.props.href}>
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
             <img className="image" src={this.props.img}/>
             <div className="text">{this.props.title}
                 <p>

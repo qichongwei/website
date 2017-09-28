@@ -100,9 +100,14 @@ class Item extends React.Component {
         source: 'qijiayin',
         qijiayin: false
     };
+<<<<<<< HEAD
 
     render() {
         return (<a className="box clear">
+=======
+    render(){
+        return(<a className="box clear">
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
             <img className="image" src=""/>
             <div className="text">{this.props.videoSrc}
                 <p>
@@ -150,6 +155,7 @@ import Load from '../load';
 
 export  default  class App extends React.Component {
     // es6默认state写法
+<<<<<<< HEAD
     constructor() {
         super();
         this.last=undefined;
@@ -178,11 +184,32 @@ export  default  class App extends React.Component {
                     load: false,
                     arr: arr1,
                     num: number + 10
+=======
+    state = {
+        load: true,
+        arr: [],
+        num:0
+    };
+
+    componentDidMount() {
+        console.log(this.props.location);
+        let number=this.state.num;
+        let arr=this.state.arr;
+        axios.get(`http://localhost:4005/?channel=%E5%A4%B4%E6%9D%A1&start=${number}`)
+            .then( (response)=> {
+                console.log(response);
+                let arr1=arr.concat(response.data);
+                this.setState({
+                    load:false,
+                    arr: arr1,
+                    num:number+10
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
                 });
             })
             .catch(function (error) {
                 console.log(error);
             });
+<<<<<<< HEAD
         function getViewportSize() {
             return {
                 width: window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
@@ -267,10 +294,13 @@ export  default  class App extends React.Component {
         console.log(this.lastIndex);
         console.log(this.scrollTop);
 
+=======
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
     }
 
     render() {
         return (
+<<<<<<< HEAD
             <div className="newsbox">
                 <Load load={this.state.load}/>
                 {this.state.arr.map(function (elem, index, arr) {
@@ -279,11 +309,24 @@ export  default  class App extends React.Component {
                         return (
                             <News img={elem.pic} time={elem.time} title={elem.title} name={elem.src}
                                   key={'item' + index} id="last"/>
+=======
+            <div className="newsbox" >
+                <Load load={this.state.load}/>
+                {this.state.arr.map(function (elem, index, arr) {
+                    if(index==arr.length-1){
+                        console.log('证明我执行了last');
+                        return (
+                            <News img={elem.pic} time={elem.time} title={elem.title} name={elem.src} key={'item'+index} ref="last"/>
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
                         )
                     }
                     console.log('证明我执行');
                     return (
+<<<<<<< HEAD
                         <News img={elem.pic} time={elem.time} title={elem.title} name={elem.src} key={'item' + index}/>
+=======
+                        <News img={elem.pic} time={elem.time} title={elem.title} name={elem.src} key={'item'+index}/>
+>>>>>>> a3ae2206b59abe2ac5291c5f748096659dd34969
                     )
                 })}
             </div>
