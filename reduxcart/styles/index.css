@@ -1,0 +1,80 @@
+/*通用style*/
+body,div{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+/*头部*/
+.header{
+    width: 100%;
+    height: 80px;
+    font-size: 32px;
+    line-height: 80px;
+    text-align:center;
+    background-color: #EEE;
+}
+/*列表项*/
+.item{
+    padding: 5px 10px;
+    height: 90px;
+}
+.item>div{
+   float: left;
+}
+.check{
+    width: 10%;
+    height: 100%;
+}
+.check div{
+    width: 14px;
+    height: 14px;
+    margin: 33px auto;
+    border-radius: 50%;
+    border: solid 1px #595252;
+    cursor: pointer;
+}
+ .check .checked{
+    background: url('../images/checked.png') center /14px 14px no-repeat;
+     border:solid 0 #FFF;
+}
+.thing{
+    width: 90%;
+    height: 100%;
+    position: relative;
+    padding-left: 5px;
+}
+.thing p{
+    margin: 5px;
+    font-size: 16px;
+}
+.thing .number{
+    width: 70px;
+    height: 21px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    bottom: 0;
+    right:20px;
+    border: solid 1px #959595;
+    border-radius: 2px;
+
+}
+.number div{
+    float: left;
+    width: 20px;
+    height: 20px;
+}
+.number div:nth-child(2){
+    border-right:solid 1px #959595;
+    border-left: solid 1px #959595;
+    width: 28px;
+}
+.footer p{
+    text-align: right;
+    margin-right: 30px;
+    font-size: 25px;
+}
+.total{
+    color:red;
+}
