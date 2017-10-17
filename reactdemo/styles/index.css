@@ -1,0 +1,228 @@
+/*通用style*/
+div, body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+/*流程box*/
+.stepBox {
+    margin: 30px;
+    width: 400px;
+    height: 25px;
+
+}
+.stepBox > div {
+    float: left;
+    width: 95px;
+    height: 25px;
+    position: relative;
+}
+/*第一步进行ing*/
+.stepOneBox {
+    z-index: 100;
+}
+.stepOneBox .stepOne {
+    width: 82.5px;
+    height: 25px;
+    position: relative;
+    z-index: 100;
+
+    border: solid 1px #108ee9;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #108ee9;
+
+}
+.stepOneBox .stepOneArrow {
+    width: 17px;
+    height: 17px;
+    z-index: 100;
+    position: absolute;
+    right: 3px;
+    background-color: #108ee9;
+    top: 3.7px;
+    transform: rotate(45deg);
+    border-top: solid 1px #108ee9;
+    border-right: solid 1px #108ee9;
+}
+/*第一步未进行*/
+.steponebox {
+    z-index: 100;
+}
+.steponebox .stepOne {
+    width: 82.5px;
+    height: 25px;
+    position: relative;
+    z-index: 100;
+
+    border: solid 1px #ccc;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #e5e5e5;
+}
+.steponebox .stepOneArrow {
+    width: 17px;
+    height: 17px;
+    z-index: 100;
+    position: absolute;
+    right: 3px;
+    background-color: #e5e5e5;
+    top: 3.7px;
+    transform: rotate(45deg);
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+/*第二、三步进行ing*/
+.stepTwoBox .stepTwo {
+    width: 82.5px;
+    height: 25px;
+    position: relative;
+    z-index: 90;
+
+    border: solid 1px #108ee9;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #108ee9;
+}
+.stepTwoBox .stepTwoArrowR {
+    width: 17px;
+    height: 17px;
+    z-index: 100;
+    position: absolute;
+    right: 3px;
+    background-color: #108ee9;
+    top: 3.7px;
+    transform: rotate(45deg);
+    border-top: solid 1px #108ee9;
+    border-right: solid 1px #108ee9;
+}
+.stepTwoBox .stepTwoArrowL {
+    width: 17px;
+    height: 17px;
+    z-index: 95;
+    position: absolute;
+    left: -8px;
+    background-color: #fff;
+    top: 3.7px;
+    transform: rotate(45deg);
+}
+/*第二、三步未进行*/
+.steptwobox .stepTwo {
+    width: 82.5px;
+    height: 25px;
+    position: relative;
+    z-index: 90;
+
+    border: solid 1px #ccc;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #e5e5e5;
+
+}
+.steptwobox .stepTwoArrowR {
+    width: 17px;
+    height: 17px;
+    z-index: 100;
+    position: absolute;
+    right: 3px;
+    background-color: #e5e5e5;
+    top: 3.7px;
+    transform: rotate(45deg);
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+.steptwobox .stepTwoArrowL {
+    width: 17px;
+    height: 17px;
+    z-index: 95;
+    position: absolute;
+    left: -8px;
+    background-color: #fff;
+    top: 3.7px;
+    transform: rotate(45deg);
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+/*第四步进行ing*/
+.stepThreeBox .stepThree {
+    width: 82.5px;
+    height: 25px;
+    position: relative;
+    z-index: 90;
+
+    border: solid 1px #108ee9;
+
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #108ee9;
+}
+.stepThreeBox .stepThreeArrow {
+    width: 17px;
+    height: 17px;
+    z-index: 95;
+    position: absolute;
+    left: -8px;
+    background-color: #fff;
+    top: 3.7px;
+    transform: rotate(45deg);
+}
+/*第四步未进行*/
+.stepthreebox .stepThree {
+    width: 82.5px;
+    height: 25px;
+    position: relative;
+    z-index: 90;
+    border: solid 1px #ccc;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    background-color: #e5e5e5;
+
+}
+.stepthreebox .stepThreeArrow {
+    width: 17px;
+    height: 17px;
+    z-index: 95;
+    position: absolute;
+    left: -8px;
+    background-color: #fff;
+    top: 3.7px;
+    transform: rotate(45deg);
+    border-top: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+}
+/*中止*/
+.stepBox .stepStop {
+    color: #d0021b;
+    border: solid 1px #d0021b;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+
+}
+/*点击按钮*/
+.btn{
+    border: solid 1px #eee;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+    height: 25px;
+    width: 100px;
+    margin-top:20px;
+    background-color: coral;
+    color:#fff;
+    margin-left: 50px;
+    cursor: pointer;
+}
